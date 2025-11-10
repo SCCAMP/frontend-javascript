@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "amd", 
+    "target": "es5",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "outFile": "./dist/bundle.js" 
+  },
+  "include": [
+    "js/subjects/Teacher.ts",
+    "js/subjects/Subject.ts",
+    "js/subjects/Cpp.ts",
+    "js/subjects/Java.ts",
+    "js/subjects/React.ts",
+    "js/main.ts"
+  ]
+}
