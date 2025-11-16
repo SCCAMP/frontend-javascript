@@ -58,17 +58,13 @@ export function executeWork(employee: Director | Teacher): string {
 
 type Subjects = 'Math' | 'History';
 
-function teachClass(todayClass: Subjects): string {
+export function teachClass(todayClass:Subjects): string {
   if (todayClass === 'Math') {
     return 'Teaching Math';
   }
-  if (todayClass === 'History') {
-    return 'Teaching History';
-  }
-  // This line is technically unreachable due to the Subject type
-  // but it's good practice for exhaustive checks.
-  return `Teaching ${todayClass}`;
+  return 'Teaching History';
 }
+
 
 // Example for Task 7
 console.log('--- Task 7 Examples ---');
