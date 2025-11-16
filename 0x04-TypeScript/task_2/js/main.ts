@@ -39,27 +39,19 @@ console.log(createEmployee(200));   // Teacher
 console.log(createEmployee(1000));  // Director
 console.log(createEmployee('$500')); // Director
 
+// --- Task 6: ---
 
-// --- Task 6: Creating functions specific to employees ---
-
-// Type predicate function
-function isDirector(employee: Director | Teacher): employee is Director {
-  // Check if the 'workDirectorTasks' method exists on the employee
+export function isDirector(employee: Director | Teacher): employee is Director {
   return (employee as Director).workDirectorTasks !== undefined;
 }
 
-function executeWork(employee: Director | Teacher): void {
+export function executeWork(employee: Director | Teacher): string {
   if (isDirector(employee)) {
-    console.log(employee.workDirectorTasks());
-  } else {
-    console.log(employee.workTeacherTasks());
+    return employee.workDirectorTasks();
   }
+  return employee.workTeacherTasks();
 }
 
-// Example for Task 6
-console.log('--- Task 6 Examples ---');
-executeWork(createEmployee(200));   // Getting to work
-executeWork(createEmployee(1000)); // Getting to director tasks
 
 
 // --- Task 7: String literal types ---
