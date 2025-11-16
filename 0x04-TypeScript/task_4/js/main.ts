@@ -1,35 +1,32 @@
-// task_4/js/main.ts
+import { Cpp, Java, React } from './subjects';
+import { Teacher } from './Teacher';
 
-/// <reference path="subjects/Cpp.ts" />
-/// <reference path="subjects/Java.ts" />
-/// <reference path="subjects/React.ts" />
+// Create subjects
+export const cpp = new Cpp();
+export const java = new Java();
+export const react = new React();
 
-// REMOVED 'export'
-const cpp = new Subjects.Cpp();
-const java = new Subjects.Java();
-const react = new Subjects.React();
-
-// REMOVED 'export'
-const cTeacher: Subjects.Teacher = {
-  firstName: 'Guillaume',
-  lastName: 'Salva',
+// Create teacher
+export const cTeacher: Teacher = {
+  firstName: "John",
+  lastName: "Doe",
   experienceTeachingC: 10,
 };
 
-// --- Cpp Subject ---
-console.log('C++');
+// Cpp
+console.log("C++");
 cpp.setTeacher(cTeacher);
 console.log(cpp.getRequirements());
 console.log(cpp.getAvailableTeacher());
 
-// --- Java Subject ---
-console.log('Java');
+// Java
+console.log("Java");
 java.setTeacher(cTeacher);
 console.log(java.getRequirements());
 console.log(java.getAvailableTeacher());
 
-// --- React Subject ---
-console.log('React');
+// React
+console.log("React");
 react.setTeacher(cTeacher);
 console.log(react.getRequirements());
 console.log(react.getAvailableTeacher());
