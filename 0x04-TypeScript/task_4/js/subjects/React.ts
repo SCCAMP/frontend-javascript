@@ -16,7 +16,7 @@ namespace Subjects {
 
     getAvailableTeacher(): string {
       // Check if the teacher has experience in React
-      if (this.teacher?.experienceTeachingReact > 0) {
+      if (this.teacher.experienceTeachingReact > 0) {
         return `Available Teacher: ${this.teacher.firstName}`;
       }
       return 'No available teacher';
